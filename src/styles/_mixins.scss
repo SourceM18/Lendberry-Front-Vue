@@ -1,0 +1,73 @@
+@import "variables";
+
+@mixin titleText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $gray-color;
+
+  @media (max-width: $mobile) {
+    font-size: 10px;
+    line-height: 11px;
+  }
+}
+@mixin text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (max-width: $mobile) {
+    font-size: 10px;
+    line-height: 11px;
+  }
+}
+
+@mixin textBig {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin bodyPadding {
+  padding: 0 30px;
+  @media (max-width: $mobile) {
+    padding: 0 10px;
+  }
+}
+@mixin gridInputsMargin {
+  display: grid;
+  grid-row-gap: 26px;
+  @media (max-width: $mobile) {
+    grid-row-gap: 13px;
+  }
+}
+
+%scroll {
+  overflow: auto;
+  height: 100%;  
+  scroll-snap-type: block;
+  scroll-padding: 10px;
+  &::-webkit-scrollbar {
+    width: 24px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-left: 20px solid $white-color;
+    border-top: 10px solid $white-color;
+    border-bottom: 10px solid $white-color;
+  }
+  scrollbar-width: thin;   
+}
